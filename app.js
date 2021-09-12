@@ -6,7 +6,9 @@ const output = document.querySelector("#output")
 
 //costprice,number of stocks,selling price
 function calculateProfitAndLoss(cp, num, sp) {
-    // console.log(typeof (cp))
+    if (sp <= 0 | cp <= 0 | num <= 0) {
+        return [0, 0, "emptyornegative"];
+    }
     if (sp > cp) {
         //profit
         const profit = sp - cp;
@@ -25,9 +27,10 @@ function calculateProfitAndLoss(cp, num, sp) {
     }
 }
 function displayOutput(str, result) {
-    console.log(output);
-
-    if (result === "profit") {
+    if (result === "emptyornegative") {
+        output.style.color = "brown";
+        output.innerText = (str);
+    } else if (result === "profit") {
         output.style.color = "green";
         output.innerText = (str);
 
@@ -45,10 +48,12 @@ function displayOutput(str, result) {
 
 function clickHandler() {
     const [value, percentage, ans] = calculateProfitAndLoss(Number(initialPrice.value), Number(quantity.value), Number(currentPrice.value));
-    console.log(typeof percentage)
-    console.log(value, percentage, ans)
+
     let outputText = "Kuch bhi nahi ukaada";
-    if (ans === "profit") {
+    if (ans === "emptyornegative") {
+        outputText = "Kehna Kya chahte ho?";
+        displayOutput(outputText, ans)
+    } else if (ans === "profit") {
         outputText = `Paisa hiii paisa,Profit=${value} aur ${percentage.toFixed(2)}% pratishath ka fayda, Wah bhai wahh!!☺️`;
         displayOutput(outputText, ans)
     } else if (ans === "loss") {
