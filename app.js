@@ -49,7 +49,7 @@ function clickHandler() {
     console.log(value, percentage, ans)
     let outputText = "Kuch bhi nahi ukaada";
     if (ans === "profit") {
-        outputText = `Paisa hiii paisa,Profit=${value} aur ${percentage.toFixed(2)}% pratishath ka fayda, Wah bhai wahh!!`
+        outputText = `Paisa hiii paisa,Profit=${value} aur ${percentage.toFixed(2)}% pratishath ka fayda, Wah bhai wahh!!☺️`;
         displayOutput(outputText, ans)
     } else if (ans === "loss") {
         outputText = `Paisa sab barbaad,Loss=${value} aur ${percentage.toFixed(2)}% pratishath nuksaan`
