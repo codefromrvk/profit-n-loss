@@ -24,10 +24,24 @@ function calculateProfitAndLoss(cp, num, sp) {
         return [0, 0, "same"];
     }
 }
-function displayOutput(str) {
+function displayOutput(str, result) {
     console.log(output);
-    output.innerText = (str);
+
+    if (result === "profit") {
+        output.style.color = "green";
+        output.innerText = (str);
+
+
+    } else if (result === "loss") {
+        output.style.color = "red";
+        output.innerText = (str);
+    }
+    else {
+        output.style.color = "brown";
+        output.innerText = (str);
+    }
 }
+
 
 function clickHandler() {
     const [value, percentage, ans] = calculateProfitAndLoss(Number(initialPrice.value), Number(quantity.value), Number(currentPrice.value));
@@ -36,12 +50,12 @@ function clickHandler() {
     let outputText = "Kuch bhi nahi ukaada";
     if (ans === "profit") {
         outputText = `Paisa hiii paisa,Profit=${value} aur ${percentage.toFixed(2)}% pratishath ka fayda, Wah bhai wahh!!`
-        displayOutput(outputText)
+        displayOutput(outputText, ans)
     } else if (ans === "loss") {
         outputText = `Paisa sab barbaad,Loss=${value} aur ${percentage.toFixed(2)}% pratishath nuksaan`
-        displayOutput(outputText)
+        displayOutput(outputText, ans)
     } else {
-        displayOutput(outputText);
+        displayOutput(outputText, ans);
     }
 }
 
