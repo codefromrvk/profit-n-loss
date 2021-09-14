@@ -3,6 +3,7 @@ const quantity = document.querySelector("#quantity")
 const currentPrice = document.querySelector("#current-price")
 const btn = document.querySelector("#btn")
 const output = document.querySelector("#output")
+const outputImg = document.querySelector(".container2")
 
 //costprice,number of stocks,selling price
 function calculateProfitAndLoss(cp, num, sp) {
@@ -27,20 +28,26 @@ function calculateProfitAndLoss(cp, num, sp) {
     }
 }
 function displayOutput(str, result) {
+    outputImg.classList.remove("invalid", "profit", "loss", "safe")
     if (result === "emptyornegative") {
         output.style.color = "brown";
+        outputImg.classList.add("invalid");
         output.innerText = (str);
+
     } else if (result === "profit") {
         output.style.color = "green";
+        outputImg.classList.add("profit");
         output.innerText = (str);
 
 
     } else if (result === "loss") {
         output.style.color = "red";
+        outputImg.classList.add("loss");
         output.innerText = (str);
     }
     else {
         output.style.color = "brown";
+        outputImg.classList.add("safe");
         output.innerText = (str);
     }
 }

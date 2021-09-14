@@ -3,22 +3,36 @@
 :root{
 
 }
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 body{
     font-family: 'IBM Plex Serif', serif;
     margin: auto;
     width: 50vw;
 }
 main{
-    
+    display: flex;
 }
-input{
-    text-align:justify;
+.container1{
+    width: 50%;
+    padding: 0.5rem;
+}
+.container2{
+    width: 50%;
+    text-align: center;
+
+    
 }
 label,input{
     margin-bottom: 1rem;
 }
 input{
 display: block;
+width: 100%;
+text-align:justify;
 }
 /* button */
 
@@ -29,8 +43,10 @@ background-color: black;
 }
 /* output */
 #output{
-    font-size: 1.2rem;
+    padding-left: 1rem;
     font-weight: bold;
+    font-size: 11px;
+    word-wrap: break-word;
 }
 /* footer*/
 .list-non-bullet {
@@ -42,6 +58,32 @@ background-color: black;
     display: inline;
     padding-right: 0.5rem;
 }
+.invalid{
+    background-image : url('invalid.png');
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+
+}
+.profit{
+    background-image : url('profit.png');
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.loss{
+    background-image : url('loss.png');
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.safe{
+    background-image : url('safe.png');
+    background-position: center;
+    background-size:contain;
+    background-repeat: no-repeat;
+}
+
 
  .footer {
     background-color: var(--primary-color);
