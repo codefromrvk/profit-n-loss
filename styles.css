@@ -10,11 +10,11 @@
 }
 body{
     font-family: 'IBM Plex Serif', serif;
-    margin: auto;
+    margin: 5rem auto;
     width: 70vw;
 }
 header{
-    margin-top: 1rem;
+    
     border: 1px solid black;
     background-color: gray;
 }
@@ -26,7 +26,7 @@ h2{
 }
 main{
     display: flex;
-    border: 1px solid rgb(172, 157, 157);
+    border: 1.5px solid rgb(0 0 0);
     /* box-shadow: 5px 10px black; */
 }
 .container1{
@@ -35,6 +35,9 @@ main{
 
 }
 .container2{
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
     width: 50%;
     padding: 0.2rem;
     text-align: center;

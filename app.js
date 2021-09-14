@@ -30,7 +30,7 @@ function calculateProfitAndLoss(cp, num, sp) {
 function displayOutput(str, result) {
     outputImg.classList.remove("invalid", "profit", "loss", "safe")
     if (result === "emptyornegative") {
-        // output.style.backgroundColor = "black";
+        output.style.backgroundColor = "gray";
         outputImg.classList.add("invalid");
         output.innerText = (str);
 
