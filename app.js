@@ -30,23 +30,23 @@ function calculateProfitAndLoss(cp, num, sp) {
 function displayOutput(str, result) {
     outputImg.classList.remove("invalid", "profit", "loss", "safe")
     if (result === "emptyornegative") {
-        output.style.color = "brown";
+        // output.style.backgroundColor = "black";
         outputImg.classList.add("invalid");
         output.innerText = (str);
 
     } else if (result === "profit") {
-        output.style.color = "green";
+        output.style.backgroundColor = "green";
         outputImg.classList.add("profit");
         output.innerText = (str);
 
 
     } else if (result === "loss") {
-        output.style.color = "red";
+        output.style.backgroundColor = "red";
         outputImg.classList.add("loss");
         output.innerText = (str);
     }
     else {
-        output.style.color = "brown";
+        output.style.backgroundColor = "brown";
         outputImg.classList.add("safe");
         output.innerText = (str);
     }
@@ -61,10 +61,10 @@ function clickHandler() {
         outputText = "Kehna Kya chahte ho?";
         displayOutput(outputText, ans)
     } else if (ans === "profit") {
-        outputText = `Paisa hiii paisa,Profit=${value} aur ${percentage.toFixed(2)}% pratishath ka fayda, Wah bhai wahh!!☺️`;
+        outputText = `Profit:+Rs.${value} ( ${percentage.toFixed(2)}%)`;
         displayOutput(outputText, ans)
     } else if (ans === "loss") {
-        outputText = `Paisa sab barbaad,Loss=${value} aur ${percentage.toFixed(2)}% pratishath nuksaan`
+        outputText = `Loss-Rs.${value} (${percentage.toFixed(2)}%) `
         displayOutput(outputText, ans)
     } else {
         displayOutput(outputText, ans);
