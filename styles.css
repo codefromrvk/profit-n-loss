@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@500&display=swap');
 
-:root{
-
+::placeholder{
+    color: black;
 }
 *{
     margin: 0;
@@ -17,6 +17,8 @@ header{
     
     border: 1px solid black;
     background-color: gray;
+    border-radius: 1rem 1rem 0 0;
+    box-shadow: -4px 2px black;
 }
 h2{
     margin:1rem;
@@ -26,12 +28,17 @@ h2{
 }
 main{
     display: flex;
-    border: 1.5px solid rgb(0 0 0);
-    /* box-shadow: 5px 10px black; */
+    border:2px solid white;
+    margin-bottom: 2rem;
+    background-color: black;
+    border-radius: 0rem 0rem 1rem 1rem;
+    box-shadow: -4px 7px black;
 }
 .container1{
     width: 50%;
-    margin:0.5rem;
+    padding: 1rem;
+
+    /* border: 1px solid white; */
 
 }
 .container2{
@@ -39,19 +46,24 @@ main{
     align-items: flex-end;
     justify-content: center;
     width: 50%;
-    padding: 0.2rem;
+    border-left: 1px solid white;
     text-align: center;
 
     
 }
-label,input{
-    margin-bottom: 1rem;
+label{  
+    color:white;
 }
 input{
+    margin-bottom: 1rem;
 display: block;
 width: 100%;
 text-align:justify;
+color:black;
+background-color: gray;
 }
+
+
 /* button */
 
 #btn{
@@ -61,12 +73,16 @@ background-color: black;
 }
 /* output */
 #output{
-    font-weight: bold;
-    font-size: 11px;
-    word-wrap: break-word;
     padding:0.3rem ;
     border-radius: 0.3rem;
     border: 1px solid black;
+}
+#sub{
+    font-weight: bold;
+    font-size: 11px;
+    padding:0.3rem ;
+    border-radius: 0.3rem;
+    margin: 0.5rem;
 }
 /* footer*/
 .list-non-bullet {
