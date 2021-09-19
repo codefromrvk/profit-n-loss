@@ -60,6 +60,7 @@ display: block;
 width: 100%;
 text-align:justify;
 color:black;
+border-radius: 0.4rem;
 background-color: gray;
 }
 
@@ -67,8 +68,10 @@ background-color: gray;
 /* button */
 
 #btn{
-padding: 0.3rem;
-background-color: black;
+    margin: auto;
+    display: block;
+    padding: 0.3rem;
+    background-color: black;
     color: white;
 }
 /* output */
